@@ -4,7 +4,11 @@
 
 No sign-up, no tracking and no API keys. Deploy your own copy to Vercel in one click.
 
+**Live demo: [open-seo-toolkit.vercel.app](https://open-seo-toolkit.vercel.app)**
+
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcmkmteam-blip%2Fopen-seo-toolkit&project-name=open-seo-toolkit&repository-name=open-seo-toolkit)
+
+![Open SEO Toolkit home page](docs/screenshots/home.png)
 
 ## Features
 
@@ -15,6 +19,16 @@ No sign-up, no tracking and no API keys. Deploy your own copy to Vercel in one c
 | **Hreflang Generator** | Builds validated hreflang as HTML `<link>` tags, an XML sitemap or an HTTP `Link` header, with `x-default`. Catches common mistakes (`en-UK`, relative URLs, duplicates). The copied output is only the tags. | In your browser |
 | **Site Crawler** | Crawls a site from **your own deployment** and reports missing titles, meta descriptions, H1s, multiple H1s, images without `alt`, `noindex`, and broken internal (and optionally external) links with the pages that link to them. Live progress, filters, CSV export. | Next.js API route |
 | **AI keyword ideas** *(optional)* | Suggests keyword ideas for a seed term in the Keyword Mixer. Only appears when `GEMINI_API_KEY` is set on your deployment. | Next.js API route |
+
+## Screenshots
+
+| Keyword Mixer | Bulk Slug Generator |
+|---|---|
+| ![Keyword Mixer: plumber, electrician, locksmith × London, Manchester, Leeds](docs/screenshots/keyword-mixer.png) | ![Bulk Slug Generator with English, Turkish and Arabic titles](docs/screenshots/slug-generator.png) |
+
+| Hreflang Generator | Site Crawler |
+|---|---|
+| ![Hreflang Generator: en, ar, tr and x-default](docs/screenshots/hreflang-generator.png) | ![Site Crawler report for a 3-page crawl](docs/screenshots/site-crawler.png) |
 
 ## Deploy
 

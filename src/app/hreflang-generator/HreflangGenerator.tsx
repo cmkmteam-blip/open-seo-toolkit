@@ -133,7 +133,7 @@ export function HreflangGenerator() {
             </ul>
           )}
 
-          <pre className="mt-4 min-h-48 flex-1 overflow-x-auto rounded-lg bg-ink p-4 font-mono text-xs leading-relaxed text-paper">{output || 'Add at least one language with a URL.'}</pre>
+          <pre className="mt-4 min-h-48 flex-1 overflow-x-auto whitespace-pre-wrap break-all rounded-lg bg-ink p-4 font-mono text-xs leading-relaxed text-paper">{output || 'Add at least one language with a URL.'}</pre>
           <div className="mt-3 flex flex-wrap gap-2">
             <CopyButton text={output} label="Copy output" />
             {format === 'xml' && (
