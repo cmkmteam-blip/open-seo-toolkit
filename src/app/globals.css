@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-paper: #F7F5F0;
+  --color-card: #FFFFFF;
+  --color-ink: #16181D;
+  --color-muted: #5B5F68;
+  --color-line: #E4E0D6;
+  --color-accent: #C2410C;
+  --color-accent-dark: #9A3412;
+  --color-accent-soft: #FDEEE5;
+  --color-good: #15803D;
+  --color-warn: #B45309;
+  --color-bad: #B91C1C;
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-code), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@layer base {
+  html { background: var(--color-paper); color: var(--color-ink); }
+  body { @apply font-sans antialiased min-h-screen flex flex-col; }
+  h1, h2, h3 { @apply font-display tracking-tight; }
+  ::selection { background: var(--color-accent-soft); }
+  :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+}
+
+@utility field {
+  @apply w-full rounded-lg border border-line bg-card px-3 py-2 text-sm text-ink placeholder:text-muted/70 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+}
+@utility btn-primary {
+  @apply btn bg-ink text-paper hover:bg-ink/85;
+}
+@utility btn-accent {
+  @apply btn bg-accent text-white hover:bg-accent-dark;
+}
+@utility btn-ghost {
+  @apply btn border border-line bg-card text-ink hover:border-ink/30;
+}
+@utility label {
+  @apply mb-1.5 block text-sm font-medium text-ink;
+}
+@utility hint {
+  @apply text-xs text-muted;
+}
+@utility panel {
+  @apply rounded-2xl border border-line bg-card p-5 sm:p-6;
+}
